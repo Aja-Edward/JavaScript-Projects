@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    background-color: rgb(202, 235, 197);
+    font-family: Work Sans, sans-serif, Arial, Helvetica, sans-serif;
+}
+
+/* Quiz Title */
+.mytitle {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(88, 85, 85);
+}
+
+/* Container */
+
+.container {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    background: rgb(151, 209, 185);
+    border-radius: 7px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    box-shadow: 3px 3px 1px 2px rgba(102, 96, 96, 0.32);
+    -webkit-box-shadow: 3px 3px 1px 2px rgba(102, 96, 96, 0.32);
+    -moz-box-shadow: 3px 3px 1px 2px rgba(102, 96, 96, 0.32);
+}
+
+/* HUD */
+
+#hud {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    color: rgb(100, 117, 126);
+
+}
+
+.justify-center {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.question {
+    justify-self: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+.choice-container {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    max-width: 100%;
+    font-size: 1.5rem;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border: none;
+    background-color: #fff;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.choice-prefix {
+    background: #146356;
+    margin-right: 1.8rem;
+    width: 3rem;
+    border: none;
+    border-radius: 7px;
+    font-size: 2rem;
+    color: rgb(100, 117, 126);
+}
+
+.choice-prefix:hover {
+    background-color: rgb(100, 117, 126);
+    color: #fff;
+}
+
+.choice-text {
+    color: rgb(100, 117, 126);
+    font-size: 1.8rem;
+}
+
+.btn {
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1.5rem;
+    background: rgb(100, 117, 126);
+    border-radius: 5px;
+    border: none;
+    padding: 0.7rem 20rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.correct {
+    background-color: #28a745;
+}
+
+.incorrect {
+    background-color: #dc3545;
+}
+
+/* LOADER */
+
+#loader {
+    position: absolute;
+    border: 1.6rem solid #fff;
+    border-radius: 50%;
+    border-top: 1.6rem solid #56a5eb;
+    width: 12rem;
+    height: 12rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}

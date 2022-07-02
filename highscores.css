@@ -1,0 +1,102 @@
+h1 {
+    padding-bottom: 3rem;
+    color: rgb(100, 117, 126);
+}
+
+.btn {
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1.5rem;
+    background: rgb(100, 117, 126);
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem 3rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+#highScoreList {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 4rem;
+
+}
+
+.high-score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.high-score:hover {
+    transform: scale(1.025);
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    ul {
+        display: inline-block;
+        visibility: hidden;
+        background-color: #ffff;
+        margin: 60px -200px;
+        padding: 0;
+        width: 100vw;
+        height: 400px;
+
+    }
+
+
+    .fa-solid {
+        display: absolute;
+        top: 0;
+        margin-left: 50%;
+        visibility: visible;
+    }
+
+
+    li a {
+        display: inline-block;
+        width: 90%;
+    }
+
+    .dropdown {
+        display: block;
+        margin-top: 300px;
+        width: 80%;
+        margin-left: 20px;
+
+
+    }
+
+    .btn {
+        width: 100%;
+        margin-left: 30%;
+    }
+
+
+    .indexheader {
+        margin-top: 5%;
+        font-size: 4rem;
+        text-align: center;
+        visibility: hidden;
+
+    }
+
+    .header--btn1 {
+        margin-left: 200px;
+        visibility: hidden;
+    }
+
+    .header--btn2 {
+        margin-left: 200px;
+        visibility: hidden;
+
+    }
+
+    .indexparagraph {
+        visibility: hidden;
+    }
+
+}

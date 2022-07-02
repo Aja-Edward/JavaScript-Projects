@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="vanillaquiz.css"> -->
+    <link rel="stylesheet" href="gamepage.css">
+    <title>Game Page</title>
+</head>
+
+<body>
+    <p class="mytitle"> Vanilla Quiz</p>
+    <div class="container">
+        <!-- <div id="loader" class=""></div> -->
+        <div id="game" class="justify-center flex-column hidden">
+
+            <div id="hud">
+
+                <div id="hud-item">
+                    <p class="hud-prefix">
+                        Question
+                    </p>
+                    <h1 class="hud-main-text" id="questionCounter">
+
+                    </h1>
+                </div>
+                <div id="hud-item">
+                    <p class="hud-prefix">
+                        Score
+                    </p>
+                    <h1 class="hud-main-text" id="score">
+                        0
+                    </h1>
+                </div>
+            </div>
+            <h3 class="question" id="question"></h3>
+            <div class="choice-container">
+                <button class="choice-prefix">A</button>
+                <p class="choice-text" data-number="1"></p>
+            </div>
+            <div class="choice-container">
+                <button class="choice-prefix">B</button>
+                <p class="choice-text" data-number="2"></p>
+            </div>
+            <div class="choice-container">
+                <button class="choice-prefix">C</button>
+                <p class="choice-text" data-number="3"></p>
+            </div>
+            <div class="choice-container">
+                <button class="choice-prefix">D</button>
+                <p class="choice-text" data-number="4"></p>
+            </div>
+            <a href="gamescore.html" class="btn" id="saveScoreBtn">Submit</a>
+        </div>
+    </div>
+    <a id="scroll-up" class="secondary-color" style="display: inline;">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <script src="gamepage.js"></script>
+</body>
+
+</html>

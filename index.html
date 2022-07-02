@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Vanilla Quiz</title>
+
+</head>
+
+<body>
+    <p class="title"> Vanilla Quiz</p>
+    <div class="container">
+
+        <p class="sub-title"> Set up your quiz</p>
+        <div class="container-2">
+            <label for="text" class="label-1">Category</label>
+            <button class="videogame">Video Games</button> <br>
+
+            <label for="text" class="label-1"> Difficulty</label>
+            <input class="radiobtn" type="radio" id="mycheckbox" name="myradio" data-difficulty='easy'
+                onchange="localStorage.setItem('difficulty', 'easy');">
+            <label for="text" class="inner-label" onclick=""> Easy</label>
+            <input class="radiobtn" type="radio" id="mycheckbox" name="myradio" data-difficulty="medium"
+                onchange="localStorage.setItem('difficulty', 'medium');">
+            <label for="text" class="inner-label"> Medium</label>
+            <input class="radiobtn" type="radio" id="mycheckbox" name="myradio" data-difficulty="hard"
+                onchange="localStorage.setItem('difficulty', 'hard');">
+            <label for="text" class="inner-label"> Hard</label>
+            <br>
+            <label for="text" class="label-1"> Number of questions</label>
+            <input type="number" class="select-number"> <br>
+
+        </div>
+        <a href="gamepage.html" class="start-btn">Start</a>
+        <a href="highscores.html" class="highscore-btn">High Score</a>
+
+    </div>
+    <script src="end.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            localStorage.removeItem('difficulty');
+        })
+
+        document.querySelector('.select-number').addEventListener('input', (e) => {
+            let numQuestions = e.target.value;
+            if (numQuestions <= 0) {
+                numQuestions = 10
+            }
+            localStorage.setItem('numQuestions', numQuestions)
+        })
+    </script>
+</body>
+
+</html>
