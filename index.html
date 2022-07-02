@@ -5,55 +5,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Exo+2&family=Open+Sans:wght@400;500&family=Signika+Negative:wght@300;400&family=Yanone+Kaffeesatz:wght@500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
-    <title>Vanilla Quiz</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2&family=Open+Sans:wght@400;500&family=Signika+Negative:wght@300;400&family=Work+Sans:wght@200;300;400;500;600&family=Yanone+Kaffeesatz:wght@500&display=swap"
+        rel="stylesheet">
+    <title>ANIMATED NAVBAR</title>
 </head>
 
 <body>
-    <p class="title"> Vanilla Quiz</p>
-    <div class="container">
-
-        <p class="sub-title"> Set up your quiz</p>
-        <div class="container-2">
-            <label for="text" class="label-1">Category</label>
-            <button class="videogame">Video Games</button> <br>
-
-            <label for="text" class="label-1"> Difficulty</label>
-            <input class="radiobtn" type="radio" id="mycheckbox" name="myradio" data-difficulty='easy'
-                onchange="localStorage.setItem('difficulty', 'easy');">
-            <label for="text" class="inner-label" onclick=""> Easy</label>
-            <input class="radiobtn" type="radio" id="mycheckbox" name="myradio" data-difficulty="medium"
-                onchange="localStorage.setItem('difficulty', 'medium');">
-            <label for="text" class="inner-label"> Medium</label>
-            <input class="radiobtn" type="radio" id="mycheckbox" name="myradio" data-difficulty="hard"
-                onchange="localStorage.setItem('difficulty', 'hard');">
-            <label for="text" class="inner-label"> Hard</label>
-            <br>
-            <label for="text" class="label-1"> Number of questions</label>
-            <input type="number" class="select-number"> <br>
-
-        </div>
-        <a href="gamepage.html" class="start-btn">Start</a>
-        <a href="highscores.html" class="highscore-btn">High Score</a>
-
+    <!-- Menu Overlay -->
+    <div class="overlay overlay-slide-left" id="overlay">
+        <!-- Menu Items -->
+        <nav>
+            <ul class='nav-ul'>
+                <li id="nav-1" class="slide-out-1"><a href="#">Home</a></li>
+                <li id="nav-2" class="slide-out-2"><a href="#about">About</a></li>
+                <li id="nav-3" class="slide-out-3"><a href="#skills">Skills</a></li>
+                <li id="nav-4" class="slide-out-4"><a href="#projects">Projects</a></li>
+                <li id="nav-5" class="slide-out-5"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-    <script src="end.js"></script>
-    <script>
-        window.addEventListener('load', () => {
-            localStorage.removeItem('difficulty');
-        })
+    <!-- Menu Bars -->
+    <div class="menu-bars" id="menu-bars">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <!-- Sections -->
+    <div class="mysection">
+        <section id="home"><a href="#" target=" _blank">Edward's Design</a></section>
+        <section id="about">
+            <h1>About Me</h1>
+        </section>
+        <section id="skills">
+            <h1>My Skills</h1>
+        </section>
+        <section id="projects">
+            <h1>My Projects</h1>
+        </section>
+        <section id="contact">
+            <h1>Contact Me</h1>
+        </section>
+    </div>
+    <footer class="footer-29">
+        <div class="container">
+            <div class="d-grid grid-col-4 footer-top-29">
+                <div class="footer-list-29 footer-1">
+                    <h6 class="footer-title-29">Contact Us</h6>
+                    <ul>
+                        <li>
 
-        document.querySelector('.select-number').addEventListener('input', (e) => {
-            let numQuestions = e.target.value;
-            if (numQuestions <= 0) {
-                numQuestions = 10
-            }
-            localStorage.setItem('numQuestions', numQuestions)
-        })
-    </script>
+                            <p><span class="fas fa-map-marker-alt"></span> Sterling Digitals, FCT-Abuja
+                            </p>
+                        </li>
+                        <li><a href="tel:+2348063770187"><span class="fas fa-phone-alt"></span> +2348063770187</a></li>
+                        <li><a href="mailto:qualicontents750@gmail.com" class="mail"><span
+                                    class="far fa-envelope-open"></span>qualicontents750@gmail.com</a></li>
+                    </ul>
+                    <div class="main-social-footer-29">
+                        <a href="https://fb.com/ajasononhi@yahoo.com" target="_blank" class="facebook"><span
+                                class="fab fa-facebook-f"></span></a>
+                        <a href="#instagram" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <i class="fab fa-whatsapp"></i> <i class="fab fa-twitter"></i><i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-pinterest-p"></i><i class="fab fa-snapchat-ghost"></i> <i
+                            class="fab fa-slack"></i>
+                    </div>
+
+                </div>
+
+                <div class="footer-list-29 footer-2">
+                    <h5 id="footer-2"></h5>
+
+                    <button onclick="increment()">+</button>
+                    <button onclick="decrement()">-</button>
+                    <button class="save_button" id="save-btn" onclick="save()">Store</button>
+                </div>
+
+
+                <div class="footer-list-29 footer-3">
+
+                    <h6 class="footer-title-29">Newsletter </h6>
+                    <form action="#" class="subscribe" method="post">
+                        <input type="email" name="subscribe_email" placeholder="Email" required="">
+                        <button><span class="far fa-envelope"></span></button>
+
+                    </form>
+                    <p>Subscribe and get our newsletter</p>
+                    <p>We'll never share your email address</p>
+
+                </div>
+                <div class="footer-list-29 footer-4">
+                    <h6 class="footer-title-29">Quick Links</h6>
+                    <ul class="footer-ul">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="news.html">Gallery</a></li>
+                        <li><a href="/blog"> Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="d-grid grid-col-2 bottom-copies">
+                <p class="copy-footer-29">© 2021 Sterling Digital College<br>Designed By <a
+                        href="https://sterlingdigitals.com" target="_blank">STERLING DIGITALS</a></p>
+            </div>
+        </div>
+        </div>
+        </div>
+        <p class="save_items" id="store-record">Previous Entry: </p>
+    </footer>
+
+
+    <!-- Script -->
+    <script src="index.js"></script>
 </body>
 
 </html>
